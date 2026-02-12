@@ -166,9 +166,9 @@ Advisor: *Dr. Michael A. Parra*
 - Assisted pharmacist with medication preparation and prescription processing  
 - Managed inventory and ensured regulatory compliance  
 
-**Cashier & Sales Associate – Rite Aid** (*2023–Present*)  
+**Cashier & Sales Associate – Rite Aid** (*2023–2024*)  
 
-**Self-Employed E-commerce Seller (Mercari)** (*2023–Present*)  
+**Self-Employed E-commerce Seller (Mercari)** (*2023–2024*)  
 
 **Laboratory Monitor** (*2023*)  
 
