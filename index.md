@@ -2,6 +2,8 @@
 State College, PA  
 📞 (717) 433-1822 | ✉️ blw5699@psu.edu  
 
+![Meredith_lab_logo.png]
+
 ---
 
 ## EDUCATION
