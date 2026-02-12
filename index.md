@@ -1,0 +1,177 @@
+# Brianna L. Watts  
+State College, PA  
+📞 (717) 433-1822 | ✉️ blw5699@psu.edu  
+
+---
+
+## EDUCATION
+
+**Pennsylvania State University**  
+Ph.D. Student, Biochemistry, Microbiology, and Molecular Biology (BMMB)  
+*August 2024 – Present*  
+**GPA:** 3.95
+
+**Susquehanna University**  
+Bachelor of Science in Biochemistry, *Summa Cum Laude*  
+Minors: Biology; Women and Gender Studies  
+*May 2023*
+
+- University Honors Program  
+- Departmental Honors in Chemistry  
+
+**Study Abroad:** Morocco (*December 2022 – January 2023*)  
+- Volunteered in Roman mosaic restoration at Volubilis  
+- Studied intercultural dynamics and religious practices  
+- Participated in local cultural activities across multiple regions  
+
+---
+
+## GRADUATE FELLOWSHIPS & HONORS
+
+- **Pela Fay Braucher Summer Scholarship**, Penn State (*June 2025*)  
+- **Paul and Harriet Campbell Distinguished Graduate Fellowship** &  
+  **Verne M. Willaman Distinguished Graduate Fellowship (DGF)** (*December 2024*)  
+- **University Graduate Fellowship (UGF)** (*August 2024*)  
+- **Homer F. Braddock, Nellie H., and Oscar L. Roberts Fellowship** (*August 2024*)  
+
+---
+
+## ACADEMIC HONORS (UNDERGRADUATE)
+
+- Outstanding Chemistry Research Award (*2023*)  
+- Ronald D. and Kathleen A. Krausse STEM Scholarship  
+- McGrath Scholarship  
+- NSF S-STEM Grant #1742506  
+- Dean’s List (*2019–2023*)  
+
+---
+
+## GRADUATE RESEARCH EXPERIENCE
+
+**Pennsylvania State University – Department of Biochemistry and Molecular Biology**  
+Graduate Researcher  
+Advisor: *Dr. Timothy Meredith*  
+*December 2024 – Present*
+
+- Investigating **genetic and stress-related factors regulating IS1-mediated chromosomal amplification in *Escherichia coli***  
+- Studying bacterial stress responses and mechanisms contributing to antibiotic resistance  
+- Performing molecular cloning, bacterial transformation, electroporation, and genomic analyses in *E. coli*
+
+---
+
+## UNDERGRADUATE RESEARCH EXPERIENCE
+
+**Susquehanna University – Department of Chemistry**  
+Undergraduate Researcher  
+Advisor: *Dr. Michael A. Parra*  
+*Spring 2020 – Spring 2023*
+
+### Research Focus
+- Chromatin biology and transcriptional regulation in *Saccharomyces cerevisiae*  
+- Functional analysis of histone variants and genes of unknown function  
+
+### Research Projects
+- **The histone H2A variant H2A.Z regulates TOR signaling gene expression in *Saccharomyces cerevisiae***  
+- **Interrogating the function of YPR078C, a gene of unknown function in *Saccharomyces cerevisiae***  
+
+---
+
+## MENTORING EXPERIENCE
+
+- Mentored undergraduate research project:  
+  **“Determination of Lipoprotein Structure in Multiple *Bifidobacterium* Strains”**  
+  *January 2025 – Present*
+
+---
+
+## MANUSCRIPTS
+
+- Chowdhury, S.B., Geesaman, O., Oley, E.M., **Watts, B.L.\***, et al.  
+  **H2A.Z regulates the activity of the GTPase protein Gtp1 in *Saccharomyces cerevisiae*.**  
+  *Submitted to* **MicroPub Biology** (*co-first author*)  
+  DOI: 10.22541/au.171654051.13440337/v1  
+
+- Ford, E.G., Geesaman, O., Harling, E.E., Larkins, E.I., … **Watts, B.L.**, et al.  
+  **A conserved threonine residue on the histone H2A variant H2A.Z is important for function in *Saccharomyces cerevisiae*.**  
+  *Under review at* **PeerJ**
+
+---
+
+## POSTERS & PRESENTATIONS
+
+- Oral thesis defense and University Honors Program presentation on histone H2A.Z, TOR signaling, and antifungal resistance (*2023*)  
+- Poster and oral presentations at:  
+  - American Chemical Society National Meeting  
+  - Senior Scholars Day (Susquehanna University)  
+  - Landmark Conference Summer Research Symposium  
+  - Susquehanna Valley Undergraduate Research Symposium  
+  (*2022–2023*)
+
+---
+
+## RESEARCH SKILLS
+
+**Molecular & Microbiological Techniques**
+- Molecular cloning  
+- Bacterial transformation and electroporation  
+- PCR, gel electrophoresis, Western blotting  
+- Yeast spotting and bud index assays under genotoxic stress  
+- Genetic manipulation of *S. cerevisiae* and *E. coli*  
+- DNA and protein isolation and purification  
+
+**Bioinformatics & Data Analysis**
+- Protein Data Bank (PDB)  
+- BLAST  
+- ClustalW  
+- Galaxy  
+- RStudio  
+- A Plasmid Editor (ApE)
+
+---
+
+## TEACHING EXPERIENCE
+
+**Introduction to Microbiology Laboratory – Teaching Assistant**  
+*Spring 2025, Fall 2025*  
+- Delivered lectures and demonstrations  
+- Prepared cultures and reagents  
+- Graded coursework, proctored exams, and enforced laboratory safety  
+- Supervised and mentored students  
+
+**General Chemistry I & II – Model Student / Laboratory Assistant** (*2021–2023*)  
+
+**Microbiology Laboratory Assistant** (*Spring 2022*)  
+
+**First-Year Seminar Teaching Assistant** (*2020–2022*)  
+
+**Honors Science Seminar Assistant** (*Fall 2020*)  
+
+---
+
+## CAMPUS & PROFESSIONAL INVOLVEMENT
+
+- Gamma Sigma Epsilon (Chemistry Honor Society)  
+- Alpha Lambda Delta Honor Society  
+- Women in STEM  
+- S-STEM Scholar  
+- Orientation Leader & Coordinator (*2021–2022*)  
+- Mentor Collective  
+- TRiO Student Support Services (*2019–2023*)
+
+---
+
+## ADDITIONAL EXPERIENCE
+
+**Pharmacy Technician – Rite Aid** (*2023–2024*)  
+- Assisted pharmacist with medication preparation and prescription processing  
+- Managed inventory and ensured regulatory compliance  
+
+**Cashier & Sales Associate – Rite Aid** (*2023–Present*)  
+
+**Self-Employed E-commerce Seller (Mercari)** (*2023–Present*)  
+
+**Laboratory Monitor** (*2023*)  
+
+
+
+
