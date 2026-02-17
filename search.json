@@ -1,45 +1,24 @@
 [
   {
-    "objectID": "posts/2026-02-17-creating-website/index.html",
-    "href": "posts/2026-02-17-creating-website/index.html",
-    "title": "Creating My Academic Website with Quarto",
+    "objectID": "posts/my-second-post/index.html",
+    "href": "posts/my-second-post/index.html",
+    "title": "My Second Post",
     "section": "",
-    "text": "As a graduate student in Biochemistry, Microbiology, and Molecular Biology at Penn State, I needed a professional website to showcase my CV and share updates about my research. I initially started with a simple Jekyll-based GitHub Pages site, but I wanted something more flexible and powerful.\nEnter Quarto - an open-source scientific and technical publishing system that’s perfect for academics. Here’s why I made the switch:\n\n\n\nComputational Integration: Quarto can embed R, Python, and Julia code, which is perfect for sharing research analyses and visualizations in future blog posts.\nSuperior PDF Export: I can easily export my CV to PDF with consistent formatting - essential for job applications and conference submissions.\nModern Tooling: Quarto is actively developed by Posit (formerly RStudio) and has excellent documentation and community support.\nUnified Publishing: One system for websites, presentations, papers, and books. As I progress through my PhD, I can use Quarto for dissertation chapters, posters, and more."
+    "text": "I recently decided to get my cat, Royce, DNA tested, and the results were fascinating! It turns out that Royce is 23% Maine Coon.\nWhen I first adopted Royce, I always wondered about his background since he is physically larger and has a different personality than my other cats. The DNA test was surprisingly easy to do - just a simple cheek swab - and the wait for results was worth it.\nLearning that nearly a quarter of Royce’s genetic makeup comes from Maine Coon heritage explains so much about his personality and physical traits. Maine Coons are known for being gentle giants with dog-like personalities, and Royce definitely exhibits some of these characteristics."
   },
   {
-    "objectID": "posts/2026-02-17-creating-website/index.html#why-quarto",
-    "href": "posts/2026-02-17-creating-website/index.html#why-quarto",
-    "title": "Creating My Academic Website with Quarto",
+    "objectID": "posts/my-second-post/index.html#royces-dna-results-are-in",
+    "href": "posts/my-second-post/index.html#royces-dna-results-are-in",
+    "title": "My Second Post",
     "section": "",
-    "text": "As a graduate student in Biochemistry, Microbiology, and Molecular Biology at Penn State, I needed a professional website to showcase my CV and share updates about my research. I initially started with a simple Jekyll-based GitHub Pages site, but I wanted something more flexible and powerful.\nEnter Quarto - an open-source scientific and technical publishing system that’s perfect for academics. Here’s why I made the switch:\n\n\n\nComputational Integration: Quarto can embed R, Python, and Julia code, which is perfect for sharing research analyses and visualizations in future blog posts.\nSuperior PDF Export: I can easily export my CV to PDF with consistent formatting - essential for job applications and conference submissions.\nModern Tooling: Quarto is actively developed by Posit (formerly RStudio) and has excellent documentation and community support.\nUnified Publishing: One system for websites, presentations, papers, and books. As I progress through my PhD, I can use Quarto for dissertation chapters, posters, and more."
+    "text": "I recently decided to get my cat, Royce, DNA tested, and the results were fascinating! It turns out that Royce is 23% Maine Coon.\nWhen I first adopted Royce, I always wondered about his background since he is physically larger and has a different personality than my other cats. The DNA test was surprisingly easy to do - just a simple cheek swab - and the wait for results was worth it.\nLearning that nearly a quarter of Royce’s genetic makeup comes from Maine Coon heritage explains so much about his personality and physical traits. Maine Coons are known for being gentle giants with dog-like personalities, and Royce definitely exhibits some of these characteristics."
   },
   {
-    "objectID": "posts/2026-02-17-creating-website/index.html#the-conversion-process",
-    "href": "posts/2026-02-17-creating-website/index.html#the-conversion-process",
-    "title": "Creating My Academic Website with Quarto",
-    "section": "The Conversion Process",
-    "text": "The Conversion Process\n\nFrom Jekyll to Quarto\nThe conversion was surprisingly straightforward:\n\nConfiguration: I replaced _config.yml with _quarto.yml, which defines the site structure, navigation, and theme.\nContent: My CV (index.md) became index.qmd with just a YAML header addition. All the Markdown content stayed identical - Quarto is fully compatible with standard Markdown.\nTheme: I chose the cosmo theme for its clean, professional appearance. It’s similar to Jekyll’s minimal theme but more customizable.\nBlog Setup: I created a blog.qmd listing page that automatically aggregates posts from the posts/ directory, sorted chronologically.\n\n\n\nGitHub Actions Deployment\nThe biggest change was setting up automated deployment via GitHub Actions. Jekyll builds automatically on GitHub Pages, but Quarto requires a workflow file:\n# .github/workflows/publish.yml\nname: Publish Quarto Website\n\non:\n  push:\n    branches: [main]\n\njobs:\n  build-deploy:\n    runs-on: ubuntu-latest\n    permissions:\n      contents: write\n    steps:\n      - uses: actions/checkout@v4\n\n      - uses: quarto-dev/quarto-actions/setup@v2\n\n      - name: Render and Publish\n        uses: quarto-dev/quarto-actions/publish@v2\n        with:\n          target: gh-pages\n        env:\n          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}\nThis workflow: - Triggers on every push to the main branch - Installs Quarto - Renders the site - Deploys to the gh-pages branch\n\n\nRepository Configuration\nTwo critical GitHub settings were required:\n\nActions Permissions: Settings → Actions → General → Set “Read and write permissions”\nPages Source: Settings → Pages → Deploy from branch: gh-pages / root"
-  },
-  {
-    "objectID": "posts/2026-02-17-creating-website/index.html#what-i-learned",
-    "href": "posts/2026-02-17-creating-website/index.html#what-i-learned",
-    "title": "Creating My Academic Website with Quarto",
-    "section": "What I Learned",
-    "text": "What I Learned\n\nChallenges\nGitHub Actions Permissions: Initially, my workflow failed because GitHub Actions didn’t have write permissions. The fix was simple but not immediately obvious.\nBranch Deployment: I chose the gh-pages branch approach over the docs/ folder method. It keeps the main branch cleaner and follows standard conventions.\n\n\nBenefits\nMarkdown Compatibility: All my existing content worked perfectly - no reformatting needed.\nExtensibility: I can now easily add computational content, interactive visualizations, and more sophisticated layouts as my needs grow.\nProfessional Appearance: The site looks polished and modern, which is important for making a good impression on potential collaborators and employers."
-  },
-  {
-    "objectID": "posts/2026-02-17-creating-website/index.html#future-plans",
-    "href": "posts/2026-02-17-creating-website/index.html#future-plans",
-    "title": "Creating My Academic Website with Quarto",
-    "section": "Future Plans",
-    "text": "Future Plans\nNow that the infrastructure is in place, I plan to use this blog for:\n\nSharing updates about my research on IS1-mediated chromosomal amplification in E. coli\nDocumenting computational methods and analyses\nWriting about conferences and workshops I attend\nSharing insights about graduate school in BMMB"
-  },
-  {
-    "objectID": "posts/2026-02-17-creating-website/index.html#resources",
-    "href": "posts/2026-02-17-creating-website/index.html#resources",
-    "title": "Creating My Academic Website with Quarto",
-    "section": "Resources",
-    "text": "Resources\nIf you’re considering a similar setup, these resources were invaluable:\n\nQuarto Documentation\nQuarto for Academics Guide\nGitHub Actions for Quarto\n\nThe entire source code for this website is available on GitHub. Feel free to fork it and adapt it for your own academic website!\n\nTechnical Details: - Platform: Quarto 1.4+ - Hosting: GitHub Pages - Theme: Cosmo - Deployment: GitHub Actions (automated) - Repository: Bri-W12/CV"
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "My Second Post\n\n\n\nupdate\n\n\n\n\n\n\n\n\n\nFeb 20, 2026\n\n\nBrianna Watts\n\n\n\n\n\n\n\n\n\n\n\n\nCreating My Academic Website with Quarto\n\n\n\nwebsite\n\nquarto\n\ngithub-pages\n\n\n\nHow I converted my CV from Jekyll to Quarto and added blog functionality\n\n\n\n\n\nFeb 17, 2026\n\n\nBrianna L. Watts\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -133,10 +112,45 @@
     "text": "ADDITIONAL EXPERIENCE\nPharmacy Technician – Rite Aid (2023–2024) - Assisted pharmacist with medication preparation and prescription processing - Managed inventory and ensured regulatory compliance\nCashier & Sales Associate – Rite Aid (2023–2024)\nSelf-Employed E-commerce Seller (Mercari) (2023–2024)\nLaboratory Monitor (2023)"
   },
   {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
+    "objectID": "posts/2026-02-17-creating-website/index.html",
+    "href": "posts/2026-02-17-creating-website/index.html",
+    "title": "Creating My Academic Website with Quarto",
     "section": "",
-    "text": "Creating My Academic Website with Quarto\n\n\n\nwebsite\n\nquarto\n\ngithub-pages\n\n\n\nHow I converted my CV from Jekyll to Quarto and added blog functionality\n\n\n\n\n\nFeb 17, 2026\n\n\nBrianna L. Watts\n\n\n\n\n\nNo matching items"
+    "text": "As a graduate student in Biochemistry, Microbiology, and Molecular Biology at Penn State, I needed a professional website to showcase my CV and share updates about my research. I initially started with a simple Jekyll-based GitHub Pages site, but I wanted something more flexible and powerful.\nEnter Quarto - an open-source scientific and technical publishing system that’s perfect for academics. Here’s why I made the switch:\n\n\n\nComputational Integration: Quarto can embed R, Python, and Julia code, which is perfect for sharing research analyses and visualizations in future blog posts.\nSuperior PDF Export: I can easily export my CV to PDF with consistent formatting - essential for job applications and conference submissions.\nModern Tooling: Quarto is actively developed by Posit (formerly RStudio) and has excellent documentation and community support.\nUnified Publishing: One system for websites, presentations, papers, and books. As I progress through my PhD, I can use Quarto for dissertation chapters, posters, and more."
+  },
+  {
+    "objectID": "posts/2026-02-17-creating-website/index.html#why-quarto",
+    "href": "posts/2026-02-17-creating-website/index.html#why-quarto",
+    "title": "Creating My Academic Website with Quarto",
+    "section": "",
+    "text": "As a graduate student in Biochemistry, Microbiology, and Molecular Biology at Penn State, I needed a professional website to showcase my CV and share updates about my research. I initially started with a simple Jekyll-based GitHub Pages site, but I wanted something more flexible and powerful.\nEnter Quarto - an open-source scientific and technical publishing system that’s perfect for academics. Here’s why I made the switch:\n\n\n\nComputational Integration: Quarto can embed R, Python, and Julia code, which is perfect for sharing research analyses and visualizations in future blog posts.\nSuperior PDF Export: I can easily export my CV to PDF with consistent formatting - essential for job applications and conference submissions.\nModern Tooling: Quarto is actively developed by Posit (formerly RStudio) and has excellent documentation and community support.\nUnified Publishing: One system for websites, presentations, papers, and books. As I progress through my PhD, I can use Quarto for dissertation chapters, posters, and more."
+  },
+  {
+    "objectID": "posts/2026-02-17-creating-website/index.html#the-conversion-process",
+    "href": "posts/2026-02-17-creating-website/index.html#the-conversion-process",
+    "title": "Creating My Academic Website with Quarto",
+    "section": "The Conversion Process",
+    "text": "The Conversion Process\n\nFrom Jekyll to Quarto\nThe conversion was surprisingly straightforward:\n\nConfiguration: I replaced _config.yml with _quarto.yml, which defines the site structure, navigation, and theme.\nContent: My CV (index.md) became index.qmd with just a YAML header addition. All the Markdown content stayed identical - Quarto is fully compatible with standard Markdown.\nTheme: I chose the cosmo theme for its clean, professional appearance. It’s similar to Jekyll’s minimal theme but more customizable.\nBlog Setup: I created a blog.qmd listing page that automatically aggregates posts from the posts/ directory, sorted chronologically.\n\n\n\nGitHub Actions Deployment\nThe biggest change was setting up automated deployment via GitHub Actions. Jekyll builds automatically on GitHub Pages, but Quarto requires a workflow file:\n# .github/workflows/publish.yml\nname: Publish Quarto Website\n\non:\n  push:\n    branches: [main]\n\njobs:\n  build-deploy:\n    runs-on: ubuntu-latest\n    permissions:\n      contents: write\n    steps:\n      - uses: actions/checkout@v4\n\n      - uses: quarto-dev/quarto-actions/setup@v2\n\n      - name: Render and Publish\n        uses: quarto-dev/quarto-actions/publish@v2\n        with:\n          target: gh-pages\n        env:\n          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}\nThis workflow: - Triggers on every push to the main branch - Installs Quarto - Renders the site - Deploys to the gh-pages branch\n\n\nRepository Configuration\nTwo critical GitHub settings were required:\n\nActions Permissions: Settings → Actions → General → Set “Read and write permissions”\nPages Source: Settings → Pages → Deploy from branch: gh-pages / root"
+  },
+  {
+    "objectID": "posts/2026-02-17-creating-website/index.html#what-i-learned",
+    "href": "posts/2026-02-17-creating-website/index.html#what-i-learned",
+    "title": "Creating My Academic Website with Quarto",
+    "section": "What I Learned",
+    "text": "What I Learned\n\nChallenges\nGitHub Actions Permissions: Initially, my workflow failed because GitHub Actions didn’t have write permissions. The fix was simple but not immediately obvious.\nBranch Deployment: I chose the gh-pages branch approach over the docs/ folder method. It keeps the main branch cleaner and follows standard conventions.\n\n\nBenefits\nMarkdown Compatibility: All my existing content worked perfectly - no reformatting needed.\nExtensibility: I can now easily add computational content, interactive visualizations, and more sophisticated layouts as my needs grow.\nProfessional Appearance: The site looks polished and modern, which is important for making a good impression on potential collaborators and employers."
+  },
+  {
+    "objectID": "posts/2026-02-17-creating-website/index.html#future-plans",
+    "href": "posts/2026-02-17-creating-website/index.html#future-plans",
+    "title": "Creating My Academic Website with Quarto",
+    "section": "Future Plans",
+    "text": "Future Plans\nNow that the infrastructure is in place, I plan to use this blog for:\n\nSharing updates about my research on IS1-mediated chromosomal amplification in E. coli\nDocumenting computational methods and analyses\nWriting about conferences and workshops I attend\nSharing insights about graduate school in BMMB"
+  },
+  {
+    "objectID": "posts/2026-02-17-creating-website/index.html#resources",
+    "href": "posts/2026-02-17-creating-website/index.html#resources",
+    "title": "Creating My Academic Website with Quarto",
+    "section": "Resources",
+    "text": "Resources\nIf you’re considering a similar setup, these resources were invaluable:\n\nQuarto Documentation\nQuarto for Academics Guide\nGitHub Actions for Quarto\n\nThe entire source code for this website is available on GitHub. Feel free to fork it and adapt it for your own academic website!\n\nTechnical Details: - Platform: Quarto 1.4+ - Hosting: GitHub Pages - Theme: Cosmo - Deployment: GitHub Actions (automated) - Repository: Bri-W12/CV"
   }
 ]

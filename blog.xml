@@ -10,7 +10,30 @@
 <atom:link href="https://Bri-W12.github.io/CV/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Graduate Student at PSU</description>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Tue, 17 Feb 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 20 Feb 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>My Second Post</title>
+  <dc:creator>Brianna Watts</dc:creator>
+  <link>https://Bri-W12.github.io/CV/posts/my-second-post/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="royces-dna-results-are-in" class="level2">
+<h2 class="anchored" data-anchor-id="royces-dna-results-are-in">Royce’s DNA Results Are In!</h2>
+<p>I recently decided to get my cat, Royce, DNA tested, and the results were fascinating! It turns out that Royce is 23% Maine Coon.</p>
+<p>When I first adopted Royce, I always wondered about his background since he is physically larger and has a different personality than my other cats. The DNA test was surprisingly easy to do - just a simple cheek swab - and the wait for results was worth it.</p>
+<p>Learning that nearly a quarter of Royce’s genetic makeup comes from Maine Coon heritage explains so much about his personality and physical traits. Maine Coons are known for being gentle giants with dog-like personalities, and Royce definitely exhibits some of these characteristics.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>update</category>
+  <guid>https://Bri-W12.github.io/CV/posts/my-second-post/</guid>
+  <pubDate>Fri, 20 Feb 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Creating My Academic Website with Quarto</title>
   <dc:creator>Brianna L. Watts</dc:creator>
