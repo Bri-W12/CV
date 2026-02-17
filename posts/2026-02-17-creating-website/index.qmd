@@ -1,0 +1,124 @@
+---
+title: "Creating My Academic Website with Quarto"
+author: "Brianna L. Watts"
+date: "2026-02-17"
+categories: [website, quarto, github-pages]
+description: "How I converted my CV from Jekyll to Quarto and added blog functionality"
+---
+
+## Why Quarto?
+
+As a graduate student in Biochemistry, Microbiology, and Molecular Biology at Penn State, I needed a professional website to showcase my CV and share updates about my research. I initially started with a simple Jekyll-based GitHub Pages site, but I wanted something more flexible and powerful.
+
+Enter [Quarto](https://quarto.org/) - an open-source scientific and technical publishing system that's perfect for academics. Here's why I made the switch:
+
+### Key Advantages
+
+1. **Computational Integration**: Quarto can embed R, Python, and Julia code, which is perfect for sharing research analyses and visualizations in future blog posts.
+
+2. **Superior PDF Export**: I can easily export my CV to PDF with consistent formatting - essential for job applications and conference submissions.
+
+3. **Modern Tooling**: Quarto is actively developed by Posit (formerly RStudio) and has excellent documentation and community support.
+
+4. **Unified Publishing**: One system for websites, presentations, papers, and books. As I progress through my PhD, I can use Quarto for dissertation chapters, posters, and more.
+
+## The Conversion Process
+
+### From Jekyll to Quarto
+
+The conversion was surprisingly straightforward:
+
+1. **Configuration**: I replaced `_config.yml` with `_quarto.yml`, which defines the site structure, navigation, and theme.
+
+2. **Content**: My CV (`index.md`) became `index.qmd` with just a YAML header addition. All the Markdown content stayed identical - Quarto is fully compatible with standard Markdown.
+
+3. **Theme**: I chose the `cosmo` theme for its clean, professional appearance. It's similar to Jekyll's minimal theme but more customizable.
+
+4. **Blog Setup**: I created a `blog.qmd` listing page that automatically aggregates posts from the `posts/` directory, sorted chronologically.
+
+### GitHub Actions Deployment
+
+The biggest change was setting up automated deployment via GitHub Actions. Jekyll builds automatically on GitHub Pages, but Quarto requires a workflow file:
+
+```yaml
+# .github/workflows/publish.yml
+name: Publish Quarto Website
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+This workflow:
+- Triggers on every push to the main branch
+- Installs Quarto
+- Renders the site
+- Deploys to the `gh-pages` branch
+
+### Repository Configuration
+
+Two critical GitHub settings were required:
+
+1. **Actions Permissions**: Settings → Actions → General → Set "Read and write permissions"
+2. **Pages Source**: Settings → Pages → Deploy from branch: `gh-pages` / `root`
+
+## What I Learned
+
+### Challenges
+
+**GitHub Actions Permissions**: Initially, my workflow failed because GitHub Actions didn't have write permissions. The fix was simple but not immediately obvious.
+
+**Branch Deployment**: I chose the `gh-pages` branch approach over the `docs/` folder method. It keeps the main branch cleaner and follows standard conventions.
+
+### Benefits
+
+**Markdown Compatibility**: All my existing content worked perfectly - no reformatting needed.
+
+**Extensibility**: I can now easily add computational content, interactive visualizations, and more sophisticated layouts as my needs grow.
+
+**Professional Appearance**: The site looks polished and modern, which is important for making a good impression on potential collaborators and employers.
+
+## Future Plans
+
+Now that the infrastructure is in place, I plan to use this blog for:
+
+- Sharing updates about my research on IS1-mediated chromosomal amplification in *E. coli*
+- Documenting computational methods and analyses
+- Writing about conferences and workshops I attend
+- Sharing insights about graduate school in BMMB
+
+## Resources
+
+If you're considering a similar setup, these resources were invaluable:
+
+- [Quarto Documentation](https://quarto.org/docs/guide/)
+- [Quarto for Academics Guide](https://quarto.org/docs/websites/)
+- [GitHub Actions for Quarto](https://github.com/quarto-dev/quarto-actions)
+
+The entire source code for this website is available on [GitHub](https://github.com/Bri-W12/CV). Feel free to fork it and adapt it for your own academic website!
+
+---
+
+**Technical Details:**
+- Platform: Quarto 1.4+
+- Hosting: GitHub Pages
+- Theme: Cosmo
+- Deployment: GitHub Actions (automated)
+- Repository: [Bri-W12/CV](https://github.com/Bri-W12/CV)

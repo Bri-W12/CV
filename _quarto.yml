@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Brianna L. Watts"
+  description: "Graduate Student at PSU"
+
+  navbar:
+    left:
+      - text: "CV"
+        href: index.qmd
+      - text: "Blog"
+        href: blog.qmd
+    right:
+      - icon: github
+        href: https://github.com/Bri-W12
+      - icon: envelope
+        href: mailto:blw5699@psu.edu
+
+  page-footer:
+    center: "© 2026 Brianna L. Watts"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false
+    page-layout: full
