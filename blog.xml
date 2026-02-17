@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Brianna L. Watts</title>
+<link>https://Bri-W12.github.io/CV/blog.html</link>
+<atom:link href="https://Bri-W12.github.io/CV/blog.xml" rel="self" type="application/rss+xml"/>
+<description>Graduate Student at PSU</description>
+<generator>quarto-1.8.27</generator>
+<lastBuildDate>Tue, 17 Feb 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Creating My Academic Website with Quarto</title>
+  <dc:creator>Brianna L. Watts</dc:creator>
+  <link>https://Bri-W12.github.io/CV/posts/2026-02-17-creating-website/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="why-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="why-quarto">Why Quarto?</h2>
+<p>As a graduate student in Biochemistry, Microbiology, and Molecular Biology at Penn State, I needed a professional website to showcase my CV and share updates about my research. I initially started with a simple Jekyll-based GitHub Pages site, but I wanted something more flexible and powerful.</p>
+<p>Enter <a href="https://quarto.org/">Quarto</a> - an open-source scientific and technical publishing system that’s perfect for academics. Here’s why I made the switch:</p>
+<section id="key-advantages" class="level3">
+<h3 class="anchored" data-anchor-id="key-advantages">Key Advantages</h3>
+<ol type="1">
+<li><p><strong>Computational Integration</strong>: Quarto can embed R, Python, and Julia code, which is perfect for sharing research analyses and visualizations in future blog posts.</p></li>
+<li><p><strong>Superior PDF Export</strong>: I can easily export my CV to PDF with consistent formatting - essential for job applications and conference submissions.</p></li>
+<li><p><strong>Modern Tooling</strong>: Quarto is actively developed by Posit (formerly RStudio) and has excellent documentation and community support.</p></li>
+<li><p><strong>Unified Publishing</strong>: One system for websites, presentations, papers, and books. As I progress through my PhD, I can use Quarto for dissertation chapters, posters, and more.</p></li>
+</ol>
+</section>
+</section>
+<section id="the-conversion-process" class="level2">
+<h2 class="anchored" data-anchor-id="the-conversion-process">The Conversion Process</h2>
+<section id="from-jekyll-to-quarto" class="level3">
+<h3 class="anchored" data-anchor-id="from-jekyll-to-quarto">From Jekyll to Quarto</h3>
+<p>The conversion was surprisingly straightforward:</p>
+<ol type="1">
+<li><p><strong>Configuration</strong>: I replaced <code>_config.yml</code> with <code>_quarto.yml</code>, which defines the site structure, navigation, and theme.</p></li>
+<li><p><strong>Content</strong>: My CV (<code>index.md</code>) became <code>index.qmd</code> with just a YAML header addition. All the Markdown content stayed identical - Quarto is fully compatible with standard Markdown.</p></li>
+<li><p><strong>Theme</strong>: I chose the <code>cosmo</code> theme for its clean, professional appearance. It’s similar to Jekyll’s minimal theme but more customizable.</p></li>
+<li><p><strong>Blog Setup</strong>: I created a <code>blog.qmd</code> listing page that automatically aggregates posts from the <code>posts/</code> directory, sorted chronologically.</p></li>
+</ol>
+</section>
+<section id="github-actions-deployment" class="level3">
+<h3 class="anchored" data-anchor-id="github-actions-deployment">GitHub Actions Deployment</h3>
+<p>The biggest change was setting up automated deployment via GitHub Actions. Jekyll builds automatically on GitHub Pages, but Quarto requires a workflow file:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># .github/workflows/publish.yml</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> Publish Quarto Website</span></span>
+<span id="cb1-3"></span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">on</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb1-5"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">push</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb1-6"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">branches</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">[</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">main</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">]</span></span>
+<span id="cb1-7"></span>
+<span id="cb1-8"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">jobs</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb1-9"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">build-deploy</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb1-10"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">runs-on</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> ubuntu-latest</span></span>
+<span id="cb1-11"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">permissions</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb1-12"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">contents</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> write</span></span>
+<span id="cb1-13"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">steps</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb1-14"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> actions/checkout@v4</span></span>
+<span id="cb1-15"></span>
+<span id="cb1-16"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> quarto-dev/quarto-actions/setup@v2</span></span>
+<span id="cb1-17"></span>
+<span id="cb1-18"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> Render and Publish</span></span>
+<span id="cb1-19"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> quarto-dev/quarto-actions/publish@v2</span></span>
+<span id="cb1-20"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">with</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb1-21"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">target</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> gh-pages</span></span>
+<span id="cb1-22"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">env</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb1-23"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">GITHUB_TOKEN</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> ${{ secrets.GITHUB_TOKEN }}</span></span></code></pre></div></div>
+<p>This workflow: - Triggers on every push to the main branch - Installs Quarto - Renders the site - Deploys to the <code>gh-pages</code> branch</p>
+</section>
+<section id="repository-configuration" class="level3">
+<h3 class="anchored" data-anchor-id="repository-configuration">Repository Configuration</h3>
+<p>Two critical GitHub settings were required:</p>
+<ol type="1">
+<li><strong>Actions Permissions</strong>: Settings → Actions → General → Set “Read and write permissions”</li>
+<li><strong>Pages Source</strong>: Settings → Pages → Deploy from branch: <code>gh-pages</code> / <code>root</code></li>
+</ol>
+</section>
+</section>
+<section id="what-i-learned" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-learned">What I Learned</h2>
+<section id="challenges" class="level3">
+<h3 class="anchored" data-anchor-id="challenges">Challenges</h3>
+<p><strong>GitHub Actions Permissions</strong>: Initially, my workflow failed because GitHub Actions didn’t have write permissions. The fix was simple but not immediately obvious.</p>
+<p><strong>Branch Deployment</strong>: I chose the <code>gh-pages</code> branch approach over the <code>docs/</code> folder method. It keeps the main branch cleaner and follows standard conventions.</p>
+</section>
+<section id="benefits" class="level3">
+<h3 class="anchored" data-anchor-id="benefits">Benefits</h3>
+<p><strong>Markdown Compatibility</strong>: All my existing content worked perfectly - no reformatting needed.</p>
+<p><strong>Extensibility</strong>: I can now easily add computational content, interactive visualizations, and more sophisticated layouts as my needs grow.</p>
+<p><strong>Professional Appearance</strong>: The site looks polished and modern, which is important for making a good impression on potential collaborators and employers.</p>
+</section>
+</section>
+<section id="future-plans" class="level2">
+<h2 class="anchored" data-anchor-id="future-plans">Future Plans</h2>
+<p>Now that the infrastructure is in place, I plan to use this blog for:</p>
+<ul>
+<li>Sharing updates about my research on IS1-mediated chromosomal amplification in <em>E. coli</em></li>
+<li>Documenting computational methods and analyses</li>
+<li>Writing about conferences and workshops I attend</li>
+<li>Sharing insights about graduate school in BMMB</li>
+</ul>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<p>If you’re considering a similar setup, these resources were invaluable:</p>
+<ul>
+<li><a href="https://quarto.org/docs/guide/">Quarto Documentation</a></li>
+<li><a href="https://quarto.org/docs/websites/">Quarto for Academics Guide</a></li>
+<li><a href="https://github.com/quarto-dev/quarto-actions">GitHub Actions for Quarto</a></li>
+</ul>
+<p>The entire source code for this website is available on <a href="https://github.com/Bri-W12/CV">GitHub</a>. Feel free to fork it and adapt it for your own academic website!</p>
+<hr>
+<p><strong>Technical Details:</strong> - Platform: Quarto 1.4+ - Hosting: GitHub Pages - Theme: Cosmo - Deployment: GitHub Actions (automated) - Repository: <a href="https://github.com/Bri-W12/CV">Bri-W12/CV</a></p>
+
+
+</section>
+
+ ]]></description>
+  <category>website</category>
+  <category>quarto</category>
+  <category>github-pages</category>
+  <guid>https://Bri-W12.github.io/CV/posts/2026-02-17-creating-website/</guid>
+  <pubDate>Tue, 17 Feb 2026 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

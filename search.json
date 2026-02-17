@@ -1,0 +1,142 @@
+[
+  {
+    "objectID": "posts/2026-02-17-creating-website/index.html",
+    "href": "posts/2026-02-17-creating-website/index.html",
+    "title": "Creating My Academic Website with Quarto",
+    "section": "",
+    "text": "As a graduate student in Biochemistry, Microbiology, and Molecular Biology at Penn State, I needed a professional website to showcase my CV and share updates about my research. I initially started with a simple Jekyll-based GitHub Pages site, but I wanted something more flexible and powerful.\nEnter Quarto - an open-source scientific and technical publishing system that’s perfect for academics. Here’s why I made the switch:\n\n\n\nComputational Integration: Quarto can embed R, Python, and Julia code, which is perfect for sharing research analyses and visualizations in future blog posts.\nSuperior PDF Export: I can easily export my CV to PDF with consistent formatting - essential for job applications and conference submissions.\nModern Tooling: Quarto is actively developed by Posit (formerly RStudio) and has excellent documentation and community support.\nUnified Publishing: One system for websites, presentations, papers, and books. As I progress through my PhD, I can use Quarto for dissertation chapters, posters, and more."
+  },
+  {
+    "objectID": "posts/2026-02-17-creating-website/index.html#why-quarto",
+    "href": "posts/2026-02-17-creating-website/index.html#why-quarto",
+    "title": "Creating My Academic Website with Quarto",
+    "section": "",
+    "text": "As a graduate student in Biochemistry, Microbiology, and Molecular Biology at Penn State, I needed a professional website to showcase my CV and share updates about my research. I initially started with a simple Jekyll-based GitHub Pages site, but I wanted something more flexible and powerful.\nEnter Quarto - an open-source scientific and technical publishing system that’s perfect for academics. Here’s why I made the switch:\n\n\n\nComputational Integration: Quarto can embed R, Python, and Julia code, which is perfect for sharing research analyses and visualizations in future blog posts.\nSuperior PDF Export: I can easily export my CV to PDF with consistent formatting - essential for job applications and conference submissions.\nModern Tooling: Quarto is actively developed by Posit (formerly RStudio) and has excellent documentation and community support.\nUnified Publishing: One system for websites, presentations, papers, and books. As I progress through my PhD, I can use Quarto for dissertation chapters, posters, and more."
+  },
+  {
+    "objectID": "posts/2026-02-17-creating-website/index.html#the-conversion-process",
+    "href": "posts/2026-02-17-creating-website/index.html#the-conversion-process",
+    "title": "Creating My Academic Website with Quarto",
+    "section": "The Conversion Process",
+    "text": "The Conversion Process\n\nFrom Jekyll to Quarto\nThe conversion was surprisingly straightforward:\n\nConfiguration: I replaced _config.yml with _quarto.yml, which defines the site structure, navigation, and theme.\nContent: My CV (index.md) became index.qmd with just a YAML header addition. All the Markdown content stayed identical - Quarto is fully compatible with standard Markdown.\nTheme: I chose the cosmo theme for its clean, professional appearance. It’s similar to Jekyll’s minimal theme but more customizable.\nBlog Setup: I created a blog.qmd listing page that automatically aggregates posts from the posts/ directory, sorted chronologically.\n\n\n\nGitHub Actions Deployment\nThe biggest change was setting up automated deployment via GitHub Actions. Jekyll builds automatically on GitHub Pages, but Quarto requires a workflow file:\n# .github/workflows/publish.yml\nname: Publish Quarto Website\n\non:\n  push:\n    branches: [main]\n\njobs:\n  build-deploy:\n    runs-on: ubuntu-latest\n    permissions:\n      contents: write\n    steps:\n      - uses: actions/checkout@v4\n\n      - uses: quarto-dev/quarto-actions/setup@v2\n\n      - name: Render and Publish\n        uses: quarto-dev/quarto-actions/publish@v2\n        with:\n          target: gh-pages\n        env:\n          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}\nThis workflow: - Triggers on every push to the main branch - Installs Quarto - Renders the site - Deploys to the gh-pages branch\n\n\nRepository Configuration\nTwo critical GitHub settings were required:\n\nActions Permissions: Settings → Actions → General → Set “Read and write permissions”\nPages Source: Settings → Pages → Deploy from branch: gh-pages / root"
+  },
+  {
+    "objectID": "posts/2026-02-17-creating-website/index.html#what-i-learned",
+    "href": "posts/2026-02-17-creating-website/index.html#what-i-learned",
+    "title": "Creating My Academic Website with Quarto",
+    "section": "What I Learned",
+    "text": "What I Learned\n\nChallenges\nGitHub Actions Permissions: Initially, my workflow failed because GitHub Actions didn’t have write permissions. The fix was simple but not immediately obvious.\nBranch Deployment: I chose the gh-pages branch approach over the docs/ folder method. It keeps the main branch cleaner and follows standard conventions.\n\n\nBenefits\nMarkdown Compatibility: All my existing content worked perfectly - no reformatting needed.\nExtensibility: I can now easily add computational content, interactive visualizations, and more sophisticated layouts as my needs grow.\nProfessional Appearance: The site looks polished and modern, which is important for making a good impression on potential collaborators and employers."
+  },
+  {
+    "objectID": "posts/2026-02-17-creating-website/index.html#future-plans",
+    "href": "posts/2026-02-17-creating-website/index.html#future-plans",
+    "title": "Creating My Academic Website with Quarto",
+    "section": "Future Plans",
+    "text": "Future Plans\nNow that the infrastructure is in place, I plan to use this blog for:\n\nSharing updates about my research on IS1-mediated chromosomal amplification in E. coli\nDocumenting computational methods and analyses\nWriting about conferences and workshops I attend\nSharing insights about graduate school in BMMB"
+  },
+  {
+    "objectID": "posts/2026-02-17-creating-website/index.html#resources",
+    "href": "posts/2026-02-17-creating-website/index.html#resources",
+    "title": "Creating My Academic Website with Quarto",
+    "section": "Resources",
+    "text": "Resources\nIf you’re considering a similar setup, these resources were invaluable:\n\nQuarto Documentation\nQuarto for Academics Guide\nGitHub Actions for Quarto\n\nThe entire source code for this website is available on GitHub. Feel free to fork it and adapt it for your own academic website!\n\nTechnical Details: - Platform: Quarto 1.4+ - Hosting: GitHub Pages - Theme: Cosmo - Deployment: GitHub Actions (automated) - Repository: Bri-W12/CV"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Brianna L. Watts",
+    "section": "",
+    "text": "State College, PA 📞 (717) 433-1822 | ✉️ blw5699@psu.edu"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Brianna L. Watts",
+    "section": "EDUCATION",
+    "text": "EDUCATION\nPennsylvania State University Ph.D. Student, Biochemistry, Microbiology, and Molecular Biology (BMMB) August 2024 – Present GPA: 3.95\nSusquehanna University Bachelor of Science in Biochemistry, Summa Cum Laude Minors: Biology; Women and Gender Studies May 2023\n\nUniversity Honors Program\nDepartmental Honors in Chemistry\n\nStudy Abroad: Morocco (December 2022 – January 2023) - Volunteered in Roman mosaic restoration at Volubilis - Studied intercultural dynamics and religious practices - Participated in local cultural activities across multiple regions"
+  },
+  {
+    "objectID": "index.html#graduate-fellowships-honors",
+    "href": "index.html#graduate-fellowships-honors",
+    "title": "Brianna L. Watts",
+    "section": "GRADUATE FELLOWSHIPS & HONORS",
+    "text": "GRADUATE FELLOWSHIPS & HONORS\n\nPela Fay Braucher Summer Scholarship, Penn State (June 2025)\nPaul and Harriet Campbell Distinguished Graduate Fellowship & Verne M. Willaman Distinguished Graduate Fellowship (DGF) (December 2024)\nUniversity Graduate Fellowship (UGF) (August 2024)\nHomer F. Braddock, Nellie H., and Oscar L. Roberts Fellowship (August 2024)"
+  },
+  {
+    "objectID": "index.html#academic-honors-undergraduate",
+    "href": "index.html#academic-honors-undergraduate",
+    "title": "Brianna L. Watts",
+    "section": "ACADEMIC HONORS (UNDERGRADUATE)",
+    "text": "ACADEMIC HONORS (UNDERGRADUATE)\n\nOutstanding Chemistry Research Award (2023)\nRonald D. and Kathleen A. Krausse STEM Scholarship\nMcGrath Scholarship\nNSF S-STEM Grant #1742506\nDean’s List (2019–2023)"
+  },
+  {
+    "objectID": "index.html#graduate-research-experience",
+    "href": "index.html#graduate-research-experience",
+    "title": "Brianna L. Watts",
+    "section": "GRADUATE RESEARCH EXPERIENCE",
+    "text": "GRADUATE RESEARCH EXPERIENCE\nPennsylvania State University – Department of Biochemistry and Molecular Biology Graduate Researcher Advisor: Dr. Timothy Meredith December 2024 – Present\n\nInvestigating genetic and stress-related factors regulating IS1-mediated chromosomal amplification in Escherichia coli\nStudying bacterial stress responses and mechanisms contributing to antibiotic resistance\nPerforming molecular cloning, bacterial transformation, electroporation, and genomic analyses in E. coli"
+  },
+  {
+    "objectID": "index.html#undergraduate-research-experience",
+    "href": "index.html#undergraduate-research-experience",
+    "title": "Brianna L. Watts",
+    "section": "UNDERGRADUATE RESEARCH EXPERIENCE",
+    "text": "UNDERGRADUATE RESEARCH EXPERIENCE\nSusquehanna University – Department of Chemistry Undergraduate Researcher Advisor: Dr. Michael A. Parra Spring 2020 – Spring 2023\n\nResearch Focus\n\nChromatin biology and transcriptional regulation in Saccharomyces cerevisiae\nFunctional analysis of histone variants and genes of unknown function\n\n\n\nResearch Projects\n\nThe histone H2A variant H2A.Z regulates TOR signaling gene expression in Saccharomyces cerevisiae\nInterrogating the function of YPR078C, a gene of unknown function in Saccharomyces cerevisiae"
+  },
+  {
+    "objectID": "index.html#mentoring-experience",
+    "href": "index.html#mentoring-experience",
+    "title": "Brianna L. Watts",
+    "section": "MENTORING EXPERIENCE",
+    "text": "MENTORING EXPERIENCE\n\nMentored undergraduate research project: “Determination of Lipoprotein Structure in Multiple Bifidobacterium Strains” January 2025 – Present"
+  },
+  {
+    "objectID": "index.html#manuscripts",
+    "href": "index.html#manuscripts",
+    "title": "Brianna L. Watts",
+    "section": "MANUSCRIPTS",
+    "text": "MANUSCRIPTS\n\nChowdhury, S.B., Geesaman, O., Oley, E.M., Watts, B.L.*, et al. H2A.Z regulates the activity of the GTPase protein Gtp1 in Saccharomyces cerevisiae. Submitted to MicroPub Biology (co-first author) DOI: 10.22541/au.171654051.13440337/v1\nFord, E.G., Geesaman, O., Harling, E.E., Larkins, E.I., … Watts, B.L., et al. A conserved threonine residue on the histone H2A variant H2A.Z is important for function in Saccharomyces cerevisiae. Under review at PeerJ"
+  },
+  {
+    "objectID": "index.html#posters-presentations",
+    "href": "index.html#posters-presentations",
+    "title": "Brianna L. Watts",
+    "section": "POSTERS & PRESENTATIONS",
+    "text": "POSTERS & PRESENTATIONS\n\nOral thesis defense and University Honors Program presentation on histone H2A.Z, TOR signaling, and antifungal resistance (2023)\nPoster and oral presentations at:\n\nAmerican Chemical Society National Meeting\nSenior Scholars Day (Susquehanna University)\nLandmark Conference Summer Research Symposium\nSusquehanna Valley Undergraduate Research Symposium (2022–2023)"
+  },
+  {
+    "objectID": "index.html#research-skills",
+    "href": "index.html#research-skills",
+    "title": "Brianna L. Watts",
+    "section": "RESEARCH SKILLS",
+    "text": "RESEARCH SKILLS\nMolecular & Microbiological Techniques - Molecular cloning - Bacterial transformation and electroporation - PCR, gel electrophoresis, Western blotting - Yeast spotting and bud index assays under genotoxic stress - Genetic manipulation of S. cerevisiae and E. coli - DNA and protein isolation and purification\nBioinformatics & Data Analysis - Protein Data Bank (PDB) - BLAST - ClustalW - Galaxy - RStudio - A Plasmid Editor (ApE)"
+  },
+  {
+    "objectID": "index.html#teaching-experience",
+    "href": "index.html#teaching-experience",
+    "title": "Brianna L. Watts",
+    "section": "TEACHING EXPERIENCE",
+    "text": "TEACHING EXPERIENCE\nIntroduction to Microbiology Laboratory – Teaching Assistant Spring 2025, Fall 2025 - Delivered lectures and demonstrations - Prepared cultures and reagents - Graded coursework, proctored exams, and enforced laboratory safety - Supervised and mentored students\nGeneral Chemistry I & II – Model Student / Laboratory Assistant (2021–2023)\nMicrobiology Laboratory Assistant (Spring 2022)\nFirst-Year Seminar Teaching Assistant (2020–2022)\nHonors Science Seminar Assistant (Fall 2020)"
+  },
+  {
+    "objectID": "index.html#campus-professional-involvement",
+    "href": "index.html#campus-professional-involvement",
+    "title": "Brianna L. Watts",
+    "section": "CAMPUS & PROFESSIONAL INVOLVEMENT",
+    "text": "CAMPUS & PROFESSIONAL INVOLVEMENT\n\nGamma Sigma Epsilon (Chemistry Honor Society)\nAlpha Lambda Delta Honor Society\nWomen in STEM\nS-STEM Scholar\nOrientation Leader & Coordinator (2021–2022)\nMentor Collective\nTRiO Student Support Services (2019–2023)"
+  },
+  {
+    "objectID": "index.html#additional-experience",
+    "href": "index.html#additional-experience",
+    "title": "Brianna L. Watts",
+    "section": "ADDITIONAL EXPERIENCE",
+    "text": "ADDITIONAL EXPERIENCE\nPharmacy Technician – Rite Aid (2023–2024) - Assisted pharmacist with medication preparation and prescription processing - Managed inventory and ensured regulatory compliance\nCashier & Sales Associate – Rite Aid (2023–2024)\nSelf-Employed E-commerce Seller (Mercari) (2023–2024)\nLaboratory Monitor (2023)"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Creating My Academic Website with Quarto\n\n\n\nwebsite\n\nquarto\n\ngithub-pages\n\n\n\nHow I converted my CV from Jekyll to Quarto and added blog functionality\n\n\n\n\n\nFeb 17, 2026\n\n\nBrianna L. Watts\n\n\n\n\n\nNo matching items"
+  }
+]
