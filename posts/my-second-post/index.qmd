@@ -1,6 +1,6 @@
 ---
 title: "My Second Post"
-author: "Brianna Watts"
+author: "Brianna L. Watts"
 date: "2026-02-20"
 categories: [update]
 ---
