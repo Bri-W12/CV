@@ -20,12 +20,24 @@ img[alt="Lab logo"] {
   height: auto;
 }
 
-/* Better spacing for sections */
+/* Better spacing and blue accent for section headers */
 h2 {
   margin-top: 2.5rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #dee2e6;
+  border-bottom: 2px solid #2fa4e7;
   padding-bottom: 0.5rem;
+  color: #1a6fa3;
+}
+
+h3 {
+  color: #2fa4e7;
+}
+
+/* Blue-tinted horizontal rules */
+hr {
+  margin: 2.5rem 0;
+  border: 0;
+  border-top: 1px solid #b3d9f5;
 }
 
 /* Improve list styling */
@@ -33,9 +45,13 @@ ul {
   line-height: 1.8;
 }
 
-/* Make horizontal rules more subtle */
-hr {
-  margin: 2.5rem 0;
-  border: 0;
-  border-top: 1px solid #dee2e6;
+/* Blue accent on strong/bold text in key areas */
+.quarto-title-block .title {
+  color: #1a6fa3;
+}
+
+/* Page footer blue tint */
+.nav-footer {
+  background-color: #e8f4fc;
+  border-top: 2px solid #2fa4e7;
 }
